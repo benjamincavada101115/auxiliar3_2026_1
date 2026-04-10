@@ -17,9 +17,9 @@ class CardTest extends FunSuite {
 
   override def beforeEach(context: BeforeEach): Unit = {
     AsP = new Card(new As, new Pica)
-    ThreeP = new card(new Three, new Pica)
+    ThreeP = new Card(new Three, new Pica)
     TwoP = new Card(new Two, new Pica)
-    tenD = new card(new Ten, new Diamond)
+    tenD = new Card(new Ten, new Diamond)
     twoD = new Card(new Two, new Diamond)
     carts = ArrayBuffer[Card]()
   }
