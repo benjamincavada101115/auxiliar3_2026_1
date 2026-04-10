@@ -1,0 +1,5 @@
+package rangos
+
+trait Rangos {
+
+}

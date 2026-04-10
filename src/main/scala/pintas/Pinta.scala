@@ -1,0 +1,5 @@
+package pintas
+
+trait Pinta {
+
+}
