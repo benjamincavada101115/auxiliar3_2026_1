@@ -23,7 +23,7 @@ class CardTest extends FunSuite {
     twoD = new Card(new Two, new Diamond)
     carts = ArrayBuffer[Card]()
   }
-  
+
   test("Check a par") {
     carts += AsP
     carts += TwoP
@@ -31,7 +31,29 @@ class CardTest extends FunSuite {
     carts += twoD
     carts += ThreeP
     mano = new Hand(carts)
-    
+
     assertEquals(mano.check(), "La mano más alta es un par de 2")
+  }
+
+  test("Check dos pares") {
+    carts += ThreeP
+    carts += TwoP
+    carts += TwoP
+    carts += tenD
+    carts += ThreeP
+    mano = new Hand(carts)
+
+    assertEquals(mano.check(), "Dos pares de 2 y 3")
+  }
+
+  test("Check un trío") {
+    carts += AsP
+    carts += AsP
+    carts += AsP
+    carts += tenD
+    carts += ThreeP
+    mano = new Hand(carts)
+
+    assertEquals(mano.check(), "La mano más alta es un trío de 1")
   }
 }
