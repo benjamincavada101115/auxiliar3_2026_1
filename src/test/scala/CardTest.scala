@@ -56,4 +56,14 @@ class CardTest extends FunSuite {
 
     assertEquals(mano.check(), "La mano más alta es un trío de 1")
   }
+  test("Check full house") {
+    carts += AsP
+    carts += AsP
+    carts += AsP
+    carts += twoD
+    carts += twoD
+    mano = new Hand(carts)
+
+    assertEquals(mano.check(), "Full house de 1 y 2")
+  }
 }

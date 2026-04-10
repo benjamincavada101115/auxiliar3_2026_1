@@ -23,16 +23,19 @@ class Hand (cards: ArrayBuffer[Card]) {
     counter.remove(maxRank)
 
     val (secondMax, secondCount) = counter.maxBy(_._2)
-    
+
     if (count == 2 && secondCount == 2) {
       f"Dos pares de $maxRank y $secondMax"
+    }
+    else if ((count == 3 && secondCount == 2) || (count == 2 && secondCount == 3) ) {
+      f"Full house de $maxRank y $secondMax"
     }
     else if (count == 3) {
       f"La mano más alta es un trío de $maxRank"
     }
     else if (count == 2) {
       f"La mano más alta es un par de $maxRank"
-    }  
+    }
     else {
       "La mano más alta es carta más alta"
     }
