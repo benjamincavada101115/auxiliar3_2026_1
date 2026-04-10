@@ -1,5 +1,5 @@
 package pintas
 
-class Pica {
+class Pica extends Pinta {
 
 }

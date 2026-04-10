@@ -1,5 +1,5 @@
 package pintas
 
-class Diamond {
+class Diamond extends Pinta {
 
 }
